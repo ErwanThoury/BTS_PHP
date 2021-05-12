@@ -1,0 +1,1 @@
+Voici les erreurs de type et de syntaxe dans le fichier xml /FC_130220_181945.XML: </br> - ligne 22. Niveau d'erreur: Error 1840 </br> - ligne 22. Niveau d'erreur: Error 1824 </br>

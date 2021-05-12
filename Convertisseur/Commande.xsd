@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.gfi.fr/astre/astgf/Commande"
+elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande">
+
+<complexType name="DetailCmdType">
+ <annotation>
+      <documentation>Informations générales de la commande</documentation>
+ </annotation>
+ <sequence>
+      <element name="CodTypCmd" type="cmd:Alpha15" minOccurs="1"
+            maxOccurs="1">
+      </element>
+      <element name="Numero" minOccurs="1" maxOccurs="1"
+            type="cmd:Alpha15">
+      </element>
+      <element name="Objet" minOccurs="1" maxOccurs="1"
+            type="cmd:Alpha80">
+      </element>
+      <element name="NumLotCmd" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha15">
+      </element>
+      <element name="Tiers" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha6">
+      </element>
+      <element name="Marche" type="cmd:MarcheType" maxOccurs="1"
+            minOccurs="0">
+      </element>
+      <element name="CodAdr" type="cmd:Alpha15" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="SerPrestataire" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha8">
+      </element>
+      <element name="DateFinCmd" type="date" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="SerDem" minOccurs="1" maxOccurs="1"
+            type="cmd:Alpha8">
+      </element>
+      <element name="ActeurDem" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha15">
+      </element>
+      <element name="TelDem" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha20">
+      </element>
+      <element name="FaxDem" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha20">
+      </element>
+      <element name="MailDem" type="cmd:Alpha100" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="SerDes" type="cmd:Alpha8" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="ActeurDes" type="cmd:Alpha15" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="DatLivCmd" type="date" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="SerGes" type="cmd:Alpha8" minOccurs="1"
+            maxOccurs="1">
+      </element>
+      <element name="TypCmd" type="cmd:TypCmdType" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="TypEngCmd" type="cmd:TypEngCmdType"
+            minOccurs="0" maxOccurs="1">
+      </element>
+      <element name="CodModEdi" type="cmd:Alpha15" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="StaCmd" type="cmd:StaCmdType" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="DatCmd" type="date" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="TauRem" type="cmd:TauxType" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="ComCmd" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha255">
+      </element>
+      <element name="Delai" minOccurs="0" maxOccurs="1"
+            type="cmd:Numerique3">
+      </element>
+      <element name="Signataire" type="cmd:Alpha15" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="MenLivCmd" type="cmd:Alpha30" maxOccurs="1"
+            minOccurs="0">
+      </element>
+      <element name="TitreCmd" type="cmd:Alpha40" minOccurs="0"
+            maxOccurs="1">
+      </element>
+      <element name="StructOpe" minOccurs="0" maxOccurs="1"
+            type="cmd:IndIntEnum">
+      </element>
+      <element name="SemIndAva" type="cmd:IndIntEnum"
+            minOccurs="0" maxOccurs="1">
+      </element>
+      <element name="MultiBudg" minOccurs="0" maxOccurs="1"
+            type="cmd:Alpha1">
+      </element>
+      <element name="AdrSerDes" type="cmd:Alpha32" maxOccurs="1" 
+            minOccurs="0">
+      </element>
+      <element name="AdrSerGes" type="cmd:Alpha32" maxOccurs="1"
+            minOccurs="0">
+      </element>
+ </sequence>
+</complexType>
+
+<complexType name="ContexteType">
+  <annotation>
+       <documentation>Contexte de travail</documentation>
+  </annotation>
+  <sequence>
+              <element name="Utilisateur" minOccurs="1" maxOccurs="1"
+                    type="cmd:Alpha15">
+              </element>
+              <element name="Organisme" minOccurs="1" maxOccurs="1"
+                    type="cmd:Alpha5">
+                    <annotation>
+                          <documentation>
+                                Code interne de l'organisme
+                          </documentation>
+                    </annotation>
+              </element>
+              <element name="Exercice" minOccurs="1" maxOccurs="1"
+                    type="cmd:ExerType">
+                    <annotation>
+                          <documentation>Exercice budgétaire</documentation>
+                    </annotation>
+              </element>
+              <element name="Budget" minOccurs="1" maxOccurs="1"
+                    type="cmd:BudgetType">
+                    <annotation>
+                          <documentation>
+                                 Code interne du budget
+                          </documentation>
+                    </annotation>
+              </element>
+  </sequence>
+</complexType>
+<simpleType name="Alpha15">
+       <restriction base="string">
+              <minLength value="1"></minLength>
+              <maxLength value="15"></maxLength>
+       </restriction>
+</simpleType>
+
+<simpleType name="Alpha20">
+       <restriction base="string">
+              <minLength value="1"></minLength>
+              <maxLength value="20"></maxLength>
+       </restriction>
+</simpleType>
+
+<simpleType name="Alpha8">
+      <restriction base="string">
+              <minLength value="1"></minLength>
+              <maxLength value="8"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha80">
+      <restriction base="string">
+              <minLength value="1"></minLength>
+              <maxLength value="80"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha6">
+      <restriction base="string">
+             <minLength value="1"></minLength>
+             <maxLength value="6"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha100">
+  <annotation>
+       <documentation></documentation>
+  </annotation>
+      <restriction base="string">
+             <minLength value="1"></minLength>
+             <maxLength value="100"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="TypCmdType">
+  <annotation>
+       <documentation>Type de commande: interne ou externe</documentation>
+  </annotation>
+      <restriction base="string">
+             <length value="1"></length>
+             <enumeration value="E"></enumeration>
+             <enumeration value="I"></enumeration>
+      </restriction>
+</simpleType>
+
+<simpleType name="TypEngCmdType">
+  <annotation>
+       <documentation>Type de l'engagement de la commande</documentation>
+  </annotation>
+      <restriction base="string">
+             <length value="2"></length>
+             <enumeration value="CP"></enumeration>
+             <enumeration value="AP"></enumeration>
+      </restriction>
+</simpleType>
+
+<complexType name="CommandeType">
+  <annotation>
+       <documentation>Type commande </documentation>
+  </annotation>
+  <sequence>
+             <element name="Contexte" type="cmd:ContexteType"
+                   minOccurs="1" maxOccurs="1">
+             </element>
+             <element name="DetailCmd" type="cmd:DetailCmdType"
+                   minOccurs="1" maxOccurs="1">
+             </element>
+             <element name="Lignes" type="cmd:LignesType" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <choice maxOccurs="1" minOccurs="0">
+                    <element name="VentilationsCP"
+                          type="cmd:VentilationsCPType">
+                    </element>
+                    <element name="VentilationsAP"
+                          type="cmd:VentilationsAPType">
+                    </element>
+             </choice>
+  </sequence> 
+</complexType>
+
+<simpleType name="StaCmdType">
+      <annotation>
+             <documentation>Type statut de la commande</documentation>
+      </annotation>
+      <restriction base="string">
+            <enumeration value="EN PROJET"></enumeration>
+            <enumeration value="VALIDE"></enumeration>
+            <enumeration value="EN MODIFICATION"></enumeration>
+            <enumeration value="PROPOSE"></enumeration>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha40">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="40"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="IndIntEnum">
+      <restriction base="string">
+            <length value="1"></length>
+            <enumeration value="0"></enumeration>
+            <enumeration value="1"></enumeration>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha5">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="5"></maxLength>
+      </restriction>
+</simpleType>
+
+<complexType name="MarcheType">
+  <annotation>
+      <documentation>Type marché</documentation>
+  </annotation>
+  <sequence>
+             <element name="NumMar" type="cmd:Alpha6" minOccurs="1"
+                   maxOccurs="1">
+             </element>
+             <element name="Societe" type="cmd:Alpha5" minOccurs="1"
+                   maxOccurs="1">
+             </element>
+  </sequence>
+</complexType>
+
+<complexType name="LigCmdType">
+  <annotation>
+      <documentation>Type ligne d'une commande</documentation>
+  </annotation>
+  <sequence>
+       <choice minOccurs="1" maxOccurs="1">
+             <element name="CodBsn" type="cmd:Alpha15"></element>
+             <element name="Designation" type="cmd:Alpha2000">
+             </element>
+       </choice>
+       <element name="RefFour" type="cmd:Alpha30" minOccurs="0"
+             maxOccurs="1">
+       </element>
+       <element name="Quantite" minOccurs="0" maxOccurs="1"
+             type="cmd:QteType">
+       </element>
+       <element name="Prix" type="cmd:PrixType" minOccurs="1"
+             maxOccurs="1">
+       </element>
+       <element name="TauxRemU" type="cmd:TauxType" minOccurs="0"
+             maxOccurs="1">
+       </element>
+       <element name="CodTva" type="cmd:Alpha15" minOccurs="0"
+             maxOccurs="1">
+       </element>
+       <element name="IndPrixTtc" type="cmd:IndIntEnum"
+             minOccurs="0" maxOccurs="1">
+       </element>
+       <element name="MntHtLig" type="cmd:MntType" maxOccurs="1"
+             minOccurs="1">
+       </element>
+       <element name="MntTvaLig" type="cmd:MntType" maxOccurs="1"
+             minOccurs="1">
+       </element>
+       <element name="MntTtcLig" type="cmd:MntType" maxOccurs="1"
+             minOccurs="1">
+       </element>
+       <element name="UniteLig" type="cmd:Alpha30" maxOccurs="1"
+             minOccurs="0">
+       </element>
+  </sequence>
+</complexType>
+
+<simpleType name="Alpha30">
+      <restriction base="string">
+             <minLength value="1"></minLength>
+             <maxLength value="30"></maxLength>
+      </restriction>
+</simpleType>
+
+<complexType name="LignesType">
+  <annotation>
+       <documentation>Type regroupant plusieurs lignes de commande</documentation>
+  </annotation>
+  <sequence>
+             <element name="Ligne" type="cmd:LigCmdType" minOccurs="1"
+                   maxOccurs="unbounded">
+             </element>
+  </sequence>
+</complexType>
+
+<complexType name="VentCPType">
+  <annotation>
+       <documentation>Type ventilation CP de la commande</documentation>
+  </annotation>
+  <sequence>
+             <element name="BudgEng" type="cmd:BudgetType" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="ObjEng" type="cmd:Alpha40" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="ResCredit" type="cmd:ResCreditType"
+                   minOccurs="0" maxOccurs="1">
+             </element>
+             <element name="LigneCredit" minOccurs="1" maxOccurs="1"
+                   type="cmd:PosInt6Type">
+             </element>
+             <element name="NomencMar" type="cmd:NomencMarType"
+                   minOccurs="0" maxOccurs="1">
+             </element>
+             <choice maxOccurs="1" minOccurs="0">
+             <element name="EngAP" type="cmd:EngApType"></element>
+             <element name="OperationNature"
+                   type="cmd:OperationType">
+             </element>
+             </choice>
+             <element name="MntHt" type="cmd:MntType" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="MntTva" type="cmd:MntType" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="MntTtc" type="cmd:MntType" minOccurs="1"
+                   maxOccurs="1">
+             </element>
+             <element name="TvaVent" type="cmd:Alpha15" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="RecupTva" type="cmd:Alpha1" maxOccurs="1"
+                   minOccurs="0">
+             </element>
+             <element name="TauTvaRecup" type="cmd:TauxType"
+                   maxOccurs="1" minOccurs="0">
+             </element>
+             <element name="TiersBenef" type="cmd:Alpha6" maxOccurs="1"
+                   minOccurs="0">
+             </element>
+             <element name="RefAna" type="cmd:Alpha20" maxOccurs="1"
+                   minOccurs="0">
+             </element>
+  </sequence>
+</complexType>
+
+<simpleType name="BudgetType">
+       <restriction base="string">
+              <length value="2"></length>
+              <pattern value="[0-9]*"></pattern>
+       </restriction>
+</simpleType>
+
+<complexType name="ResCreditType">
+  <annotation>
+       <documentation>Type réservation de crédit</documentation>
+  </annotation>
+  <sequence>
+             <element name="NumRes" type="cmd:Alpha7" minOccurs="1"
+                   maxOccurs="1">
+             </element>
+             <element name="NumLigRes" minOccurs="1" maxOccurs="1"
+                   type="cmd:PosInt2Type">
+             </element>
+  </sequence>
+</complexType
+>
+<complexType name="NomencMarType">
+  <annotation>
+       <documentation>Type nomenclature marché</documentation>
+  </annotation>
+  <sequence>
+             <element name="TypeNomenc" minOccurs="1" maxOccurs="1"
+                   type="cmd:Alpha2">
+             </element>
+             <element name="CodeNomenc" minOccurs="1" maxOccurs="1"
+                   type="cmd:Alpha10">
+             </element>
+  </sequence>
+</complexType>
+
+<simpleType name="MntType">
+      <restriction base="decimal">
+            <totalDigits value="13" />
+            <fractionDigits value="2" />
+            <minInclusive value="0"></minInclusive>
+      </restriction>
+</simpleType>
+
+<complexType name="VentilationsCPType">
+  <annotation>
+       <documentation>Typeregroupant plusieurs de CP de commande</documentation>
+  </annotation>
+  <sequence>
+             <element name="VentCP" type="cmd:VentCPType" minOccurs="1"
+                   maxOccurs="unbounded">
+             </element>
+  </sequence>
+</complexType>
+
+<complexType name="EngApType">
+  <annotation>
+       <documentation>Type engagement d'AP</documentation>
+  </annotation>
+  <sequence>
+             <element name="MilEngap" type="cmd:ExerType"></element>
+             <element name="NumEngap" type="cmd:PosInt6Type"></element>
+  </sequence>
+</complexType>
+
+<simpleType name="ExerType">
+      <restriction base="gYear"></restriction>
+</simpleType>
+
+<complexType name="OperationType">
+  <annotation>
+       <documentation>Type opération</documentation>
+  </annotation>
+  <sequence>
+             <element name="Operation" type="cmd:Alpha8" minOccurs="1"
+                   maxOccurs="1">
+             </element>
+             <element name="OpeNat" type="cmd:Alpha8" minOccurs="1"
+                   maxOccurs="1">
+             </element>
+  </sequence>
+</complexType>
+
+<complexType name="VentAPType">
+  <annotation>
+       <documentation>Type ventilation d'AP d'une commande</documentation>
+  </annotation>
+  <sequence>
+             <element name="ObjEng" type="cmd:Alpha80" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="OperationNature" type="cmd:OperationType"
+                   minOccurs="1" maxOccurs="1">
+             </element>
+             <element name="NomencMar" type="cmd:NomencMarType"
+                   minOccurs="0" maxOccurs="1">
+             </element>
+             <element name="MntHt" type="cmd:MntType" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="MntTva" type="cmd:MntType" minOccurs="0"
+                   maxOccurs="1">
+             </element>
+             <element name="MntTtc" type="cmd:MntType" minOccurs="1"
+                   maxOccurs="1">
+             </element>
+             <element name="LigneCredit" minOccurs="0" maxOccurs="1"
+                   type="cmd:PosInt6Type">
+             </element>
+  </sequence>
+</complexType>
+
+<complexType name="VentilationsAPType">
+  <annotation>
+       <documentation>Type regroupant plusieurs ventilations d'AP de la commande</documentation>
+  </annotation>
+  <sequence>
+             <element name="VentAP" type="cmd:VentAPType" minOccurs="1"
+                   maxOccurs="unbounded">
+             </element>
+  </sequence>
+</complexType>
+
+<simpleType name="Alpha255">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="255"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha2000">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="2000"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="Numerique3">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="3"></maxLength>
+            <pattern value="[0-9]*"></pattern>
+      </restriction>
+</simpleType>
+
+<simpleType name="PosInt6Type">
+      <restriction base="positiveInteger">
+            <minInclusive value="1"></minInclusive>
+            <maxInclusive value="999999"></maxInclusive>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha2">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="2"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha10">
+  <annotation>
+       <documentation></documentation>
+  </annotation>
+  <restriction base="string">
+             <minLength value="1"></minLength>
+             <maxLength value="10"></maxLength>
+  </restriction>
+</simpleType>
+
+<simpleType name="PosInt2Type">
+      <restriction base="positiveInteger">
+            <maxExclusive value="99"></maxExclusive>
+            <minInclusive value="1"></minInclusive>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha7">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="7"></maxLength>
+      </restriction>
+</simpleType>
+
+<simpleType name="TauxType">
+      <restriction base="decimal">
+            <totalDigits value="5" />
+            <fractionDigits value="2" />
+            <minInclusive value="0"></minInclusive>
+      </restriction>
+</simpleType>
+
+<simpleType name="QteType">
+      <restriction base="decimal">
+            <totalDigits value="9" />
+            <fractionDigits value="3" />
+            <minInclusive value="0"></minInclusive>
+      </restriction>
+</simpleType>
+
+<simpleType name="PrixType">
+      <restriction base="decimal">
+            <totalDigits value="15" />
+            <fractionDigits value="4" />
+            <minInclusive value="0"></minInclusive>
+      </restriction>
+</simpleType>
+
+<simpleType name="Alpha1">
+  <annotation>
+      <documentation></documentation>
+  </annotation>
+  <restriction base="string">
+             <length value="1"></length>
+             <enumeration value="O"></enumeration>
+             <enumeration value="N"></enumeration>
+  </restriction>
+</simpleType>
+
+<element name="Commande" type="cmd:CommandeType">
+      <annotation>
+            <documentation>Element Commande</documentation>
+      </annotation>
+</element>
+
+<simpleType name="Alpha32">
+      <restriction base="string">
+            <minLength value="1"></minLength>
+            <maxLength value="32"></maxLength>
+      </restriction>
+</simpleType>
+
+</schema>

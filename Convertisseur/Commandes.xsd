@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.gfi.fr/astre/astgf/Commande"
+elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande">
+<include schemaLocation="Commande.xsd"></include>
+<complexType name="CommandesType">
+<annotation>
+<documentation>Type permettant le traitement d'un flux des commandes</documentation>
+</annotation>
+<sequence>
+<element name="Commande" type="cmd:CommandeType"
+maxOccurs="unbounded" minOccurs="1">
+</element>
+</sequence>
+<attribute name="version" type="string" default="1.0"></attribute>
+</complexType>
+<complexType name="CmdCreType">
+<sequence>
+<element name="CmdId" type="cmd:Alpha30" maxOccurs="1"
+minOccurs="1">
+</element>
+<element name="Organisme" type="cmd:Alpha5" maxOccurs="1"
+minOccurs="1">
+</element>
+<element name="Exercice" type="cmd:ExerType" maxOccurs="1" minOccurs="1">
+</element>
+<element name="Budget" type="cmd:BudgetType" maxOccurs="1"
+minOccurs="1">
+</element>
+<element name="NumCmd" type="cmd:Alpha15" maxOccurs="1"
+minOccurs="1">
+</element>
+</sequence>
+<attribute name="RefExt" type="cmd:Alpha15"></attribute>
+</complexType>
+<complexType name="CmdAnoType">
+<sequence>
+<element name="MsgAno" type="cmd:Alpha2000"></element>
+</sequence>
+<attribute name="RefExt" type="cmd:Alpha15"></attribute>
+</complexType>
+<complexType name="CmdTrtType">
+<choice maxOccurs="unbounded" minOccurs="1">
+<element name="CmdCre" type="cmd:CmdCreType"></element>
+<element name="CmdAno" type="cmd:CmdAnoType"></element>
+</choice>
+</complexType>
+<element name="CmdTrt" type="cmd:CmdTrtType"></element>
+<element name="Commandes" type="cmd:CommandesType"></element>
+</schema>

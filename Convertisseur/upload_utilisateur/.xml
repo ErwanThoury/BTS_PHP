@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<BonDeCommande>
+  <BDC>
+    <ID>Thomas</ID>
+    <Budget>100</Budget>
+    <objet>loyer</objet>
+  </BDC>
+  <BDC>
+    <ID>Arnaud</ID>
+    <Budget>200</Budget>
+    <objet>loyer</objet>
+  </BDC>
+  <BDC>
+    <ID>Marine</ID>
+    <Budget>500</Budget>
+    <objet>loyer</objet>
+  </BDC>
+  <BDC>
+    <ID>Veronique</ID>
+    <Budget>100</Budget>
+    <objet>loyer</objet>
+  </BDC>
+  <BDC>
+    <ID>Yann</ID>
+    <Budget>600</Budget>
+    <objet>loyer</objet>
+  </BDC>
+  <BDC>
+    <ID>Loic</ID>
+    <Budget>800</Budget>
+    <objet>loyer</objet>
+  </BDC>
+</BonDeCommande>

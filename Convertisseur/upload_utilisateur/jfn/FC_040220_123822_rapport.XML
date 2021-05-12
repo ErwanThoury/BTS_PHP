@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<cmd:CmdTrt xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gfi.fr/astre/astgf/Commande Commandes.xsd ">
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_61">
+    <cmd:CmdId>392590</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017133</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_62">
+    <cmd:CmdId>392591</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017134</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_63">
+    <cmd:CmdId>392592</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017135</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_64">
+    <cmd:CmdId>392593</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017136</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_65">
+    <cmd:CmdId>392594</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017137</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_66">
+    <cmd:CmdId>392595</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017138</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_67">
+    <cmd:CmdId>392596</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017139</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_68">
+    <cmd:CmdId>392597</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017140</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_69">
+    <cmd:CmdId>392598</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017141</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_70">
+    <cmd:CmdId>392599</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017142</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_71">
+    <cmd:CmdId>392600</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017143</cmd:NumCmd>
+  </cmd:CmdCre>
+  <cmd:CmdCre xmlns:cmd="http://www.gfi.fr/astre/astgf/Commande" RefExt="LOYCHA_72">
+    <cmd:CmdId>392601</cmd:CmdId>
+    <cmd:Organisme>CASVP</cmd:Organisme>
+    <cmd:Exercice>2019</cmd:Exercice>
+    <cmd:Budget>01</cmd:Budget>
+    <cmd:NumCmd>C19/017144</cmd:NumCmd>
+  </cmd:CmdCre>
+</cmd:CmdTrt>
